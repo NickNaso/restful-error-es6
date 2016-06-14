@@ -1,0 +1,48 @@
+{
+  "name": "restful-error-es6",
+  "description": "Utility class to handle RESTful error with ES6 syntax sugar.",
+  "version": "1.0.0",
+  "contributors": [
+    {
+    "name": "Nicola Del Gobbo",
+    "email": "nicoladelgobbo@gmail.coom"
+    },
+    {
+      
+      "name": "Mauro Doganieri",
+      "email": "mauro.doganieri@gmail.com"
+    }
+  ],
+  "keywords": [
+    "error",
+    "rest",
+    "restful",
+    "api",
+    "es6"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=test/jasmine.json"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NickNaso/restful-error-es6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NickNaso/restful-error-es6/issues"
+  },
+  "homepage": "http://www.nacios.it/",
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "index.js",
+    "lib/"
+  ]
+}
