@@ -14,7 +14,7 @@ const app = express();
 //List of routes
 app.get("/books/:id", (req, res, next) => {
     BookCtrl.findBookById(req.params.id, (err, res) => {
-        if(err){
+        if (err) {
           res.status(500).json({error: "Message to report error"});
         } else {
             res.status(200).json(res);
@@ -33,11 +33,14 @@ const app = express();
 //List of routes
 app.get("/books/:id", (req, res, next) => {
     BookCtrl.findBookById(req.params.id, (err, res, next) => {
-        if(err){
-            var errorOpts = RESTfulError.ERROR_TYPES.INTERNAL_SERVER_ERROR;
-            errorOpts.sourceError = err;
-            errorOpts.message = "Your custom message for the error";
-            return next(new RESTfulError(errorOtps));
+        if (err) {
+            next(
+                 new RESTfulError(
+                     RESTfulError.INTERNAL_SERVER_ERROR,
+                     "Your custom message for the error.",
+                     err
+                 )
+               );
         } else {
             res.status(200).json(res);
         }
@@ -211,7 +214,7 @@ The expectation given in an Expect request-header field could not be met by this
 ### I_AM_A_TEAPOT
 Status code | Error name | Error type | Reference
 ----- | ------------------------------------------------ | ------------------------------------------------ | -----------------------------
-418 | I'm a teapoat (RFC 2324) | I_AM_A_TEAPOT | No reference
+418 | I'm a teapot (RFC 2324) | I_AM_A_TEAPOT | No reference
 
 ##### Description:
 This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers.
