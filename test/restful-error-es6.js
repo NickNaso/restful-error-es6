@@ -25,7 +25,7 @@ describe("Test restful-error-es6 utility class", function () {
 
     it("Should create a RESTfulError", function () {
 
-        let myError = new RESTfulError(RESTfulError.ERROR_TYPES.NOT_FOUND);
+        let myError = new RESTfulError(RESTfulError.NOT_FOUND);
         expect(myError.name).toEqual('RESTfulError');
 
     });
