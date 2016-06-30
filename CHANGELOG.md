@@ -1,5 +1,10 @@
 # Changelog
 
+2.0.1 / 2016-06-30
+==================
+
+  * Fixed test suite based on the new RESTfulError class structure
+
 2.0.0 / 2016-06-29
 ==================
 
