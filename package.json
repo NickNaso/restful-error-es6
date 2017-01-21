@@ -1,7 +1,7 @@
 {
   "name": "restful-error-es6",
   "description": "Utility class to handle RESTful error with ES6 syntax sugar.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "contributors": [
     {
     "name": "Nicola Del Gobbo",
